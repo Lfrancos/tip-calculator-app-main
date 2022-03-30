@@ -21,6 +21,7 @@ h1 , h2, p {
 }
 .card {
     min-width: 375px;
+    max-width: 630px;
     background-color: $color-White;
     padding: 1rem;
     border-radius: 1rem;
@@ -68,13 +69,19 @@ h1 , h2, p {
         gap: 15px;
     }
     &__button {
-        flex-basis: 160px;
+        flex-basis: 146px;
+        flex-grow: 1;
         border: none;
         background-color: $color-Very-dark-cyan;
         border-radius: .2rem;
         color: $color-White;
         font-size: 24px;
         padding: .3rem;
+        cursor: pointer;
+        &:hover {
+            background-color: $color-Strong-cyan;
+            color: $color-Very-dark-cyan;
+        }
         &.tip {
             text-align: center;
         }
@@ -111,6 +118,7 @@ h1 , h2, p {
         background-color: hsl(183, 100%, 20%);
         color: $color-Very-dark-cyan;
         padding: .4rem 1rem;
+        cursor: pointer;
     }
 
 }
@@ -125,4 +133,28 @@ footer {
 }
 .attribution a {
      color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 760px){
+    body {
+        padding: 2rem;
+    }
+    .card {
+        display: flex;
+        gap: 1rem;
+        padding: 2rem;
+        max-width: 920px;
+        &__subContainer {
+            flex-basis: 300px;
+            flex-grow: 1;
+            &.green {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+        .amount span {
+            font-size: 48px;
+        }
+    }
 }

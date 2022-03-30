@@ -31,31 +31,33 @@
             <button class="card__button">25%</button>
             <button class="card__button">15%</button>
             <button class="card__button">50%</button>
-            <input type="text" placeholder="Custom" class="card__button tip"></input>
+            <input type="number" placeholder="Custom" class="card__button tip"></input>
           </div>
         </div>
         <div class="card__item">
           <h2>Number of People</h2>
           <div class="card__input">
-            <input type="text" id="numberOfPeople" name="numberOfPeople" class="input__ text card__numberOfPeople" placeholder="0">
+            <input type="number" id="numberOfPeople" name="numberOfPeople" class="input__ text card__numberOfPeople" placeholder="0">
             <img src="./images/icon-person.svg" alt="" class="person">
           </div>
         </div>
       </div>
       <div class="card__subContainer green">
-        <div class="card__subContainer__item">
-          <div class="subtitle">
-            <h2>Tip Amount</h2>
-            <p>/ person</p>
+        <div>
+          <div class="card__subContainer__item">
+            <div class="subtitle">
+              <h2>Tip Amount</h2>
+              <p>/ person</p>
+            </div>
+            <p class="amount"><span class="tip-amount">$0.00</span></p>
           </div>
-          <p class="amount"><span class="tip-amount">$0.00</span></p>
-        </div>
-        <div class="card__subContainer__item">
-          <div class="subtitle">
-            <h2>Total</h2>
-            <p>/ person</p>
+          <div class="card__subContainer__item">
+            <div class="subtitle">
+              <h2>Total</h2>
+              <p>/ person</p>
+            </div>
+            <p class="amount"><span class="total">$0.00</span></p>
           </div>
-          <p class="amount"><span class="total">$0.00</span></p>
         </div>
         <button class="card__reset">RESET</button>
       </div>

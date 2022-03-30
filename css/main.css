@@ -204,6 +204,7 @@ h1, h2, p {
 
 .card {
   min-width: 375px;
+  max-width: 630px;
   background-color: white;
   padding: 1rem;
   border-radius: 1rem;
@@ -265,14 +266,23 @@ h1, h2, p {
 }
 
 .card__button {
-  -ms-flex-preferred-size: 160px;
-      flex-basis: 160px;
+  -ms-flex-preferred-size: 146px;
+      flex-basis: 146px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   border: none;
   background-color: #00494d;
   border-radius: .2rem;
   color: white;
   font-size: 24px;
   padding: .3rem;
+  cursor: pointer;
+}
+
+.card__button:hover {
+  background-color: #26c0ab;
+  color: #00494d;
 }
 
 .card__button.tip {
@@ -316,6 +326,7 @@ h1, h2, p {
   background-color: #006166;
   color: #00494d;
   padding: .4rem 1rem;
+  cursor: pointer;
 }
 
 footer {
@@ -330,5 +341,41 @@ footer {
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media screen and (min-width: 760px) {
+  body {
+    padding: 2rem;
+  }
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    max-width: 920px;
+  }
+  .card__subContainer {
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .card__subContainer.green {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .card .amount span {
+    font-size: 48px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
