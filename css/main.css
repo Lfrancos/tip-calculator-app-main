@@ -1,0 +1,334 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img, picture {
+  width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.center {
+  margin-inline: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.align-items-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+}
+
+.img-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.screenreader-text {
+  position: absolute;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+}
+
+.screenreader-text:focus {
+  display: inline-block;
+  height: auto;
+  width: auto;
+  position: static;
+  margin: auto;
+}
+
+body {
+  width: 100%;
+  font-family: "Space Mono", monospace;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #c5e4e7;
+}
+
+main {
+  margin: 0 auto;
+}
+
+img {
+  max-width: 86.6592px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+h1, h2, p {
+  color: #5e7a7d;
+}
+
+.card {
+  min-width: 375px;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.card__item {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.card input {
+  color: #00494d;
+  width: 100%;
+  border: none;
+  background-color: #f4fafa;
+  font-size: 24px;
+  text-align: right;
+  padding: .3rem 1rem;
+  border-radius: .6rem;
+  cursor: pointer;
+}
+
+.card input:focus {
+  outline-color: #26c0ab;
+}
+
+.card__input {
+  width: 100%;
+  border: none;
+  background-color: #f4fafa;
+  position: relative;
+  border-radius: .4rem;
+}
+
+.card__input img {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  height: 15px;
+  width: 10px;
+}
+
+.card__input .person {
+  width: 15px;
+}
+
+.card__tip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card__button {
+  -ms-flex-preferred-size: 160px;
+      flex-basis: 160px;
+  border: none;
+  background-color: #00494d;
+  border-radius: .2rem;
+  color: white;
+  font-size: 24px;
+  padding: .3rem;
+}
+
+.card__button.tip {
+  text-align: center;
+}
+
+.card__subContainer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.card__subContainer.green {
+  padding: 1rem;
+  background-color: #00494d;
+  border-radius: 1rem;
+}
+
+.card__subContainer.green h2 {
+  color: white;
+}
+
+.card__subContainer.green p {
+  color: #7f9c9f;
+}
+
+.card__subContainer p.amount {
+  font-size: 32px;
+  color: #26c0ab;
+}
+
+.card__reset {
+  border-radius: .4rem;
+  font-size: 20px;
+  width: 100%;
+  border: none;
+  background-color: #006166;
+  color: #00494d;
+  padding: .4rem 1rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=main.css.map */

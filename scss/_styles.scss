@@ -1,0 +1,128 @@
+body {
+    width: 100%;
+    font-family: $font;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-Light-grayish-cyan;
+}
+main {
+    margin: 0 auto;
+    // text-align: center;
+}
+img {
+    max-width: 86.6592px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+h1 , h2, p {
+    color: $color-Dark-grayish-cyan;
+}
+.card {
+    min-width: 375px;
+    background-color: $color-White;
+    padding: 1rem;
+    border-radius: 1rem;
+    &__item {
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    & input {
+        color: $color-Very-dark-cyan;
+        width: 100%;
+        border: none;
+        background-color: $color-Very-light-grayish-cyan;
+        font-size: 24px;
+        text-align: right;
+        padding: .3rem 1rem;
+        border-radius: .6rem;
+        cursor: pointer;
+        &:focus {
+            outline-color: $color-Strong-cyan;;
+        }
+    }
+    &__input {
+        width: 100%;
+        border: none;
+        background-color: $color-Very-light-grayish-cyan;
+        position: relative;
+        border-radius: .4rem;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translate(0%, -50%);
+            height: 15px;
+            width: 10px;
+        }
+        .person {
+            width: 15px;
+        }
+    }
+    &__tip {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap ;
+        gap: 15px;
+    }
+    &__button {
+        flex-basis: 160px;
+        border: none;
+        background-color: $color-Very-dark-cyan;
+        border-radius: .2rem;
+        color: $color-White;
+        font-size: 24px;
+        padding: .3rem;
+        &.tip {
+            text-align: center;
+        }
+    }
+    &__subContainer {
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        &.green {
+            padding: 1rem;
+            background-color: $color-Very-dark-cyan;
+            border-radius: 1rem;
+            h2 {
+                color: $color-White;
+            }
+            p {
+                color: $color-Grayish-cyan;
+            }
+        }
+        p.amount {
+            font-size: 32px;
+            color: $color-Strong-cyan;
+        }
+
+    }
+    &__reset {
+        border-radius: .4rem;
+        font-size: 20px;
+        width: 100%;
+        border: none;
+        background-color: hsl(183, 100%, 20%);
+        color: $color-Very-dark-cyan;
+        padding: .4rem 1rem;
+    }
+
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+}
+.attribution {
+    font-size: 11px; text-align: center;
+
+}
+.attribution a {
+     color: hsl(228, 45%, 44%);
+}
