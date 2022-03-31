@@ -9,13 +9,24 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Tip calculator app</title>
   <link rel="stylesheet" href="./css/main.css">
+  <script defer src="./script.js"></script>
 </head>
 <body>
 
   <main>
     <img src="./images/logo.svg" alt="">
     <div class="card">
+
       <div class="card__subContainer">
+        <div class="card__item">
+          <div class="card__number-people">
+            <h2>Number of People</h2>
+          </div>
+          <div class="card__input">
+            <input type="number" id="numberOfPeople" name="numberOfPeople" class="input__ text card__numberOfPeople" placeholder="0">
+            <img src="./images/icon-person.svg" alt="" class="person">
+          </div>
+        </div>
         <div class="card__item">
           <h1 class="card__title">Bill</h1>
           <div class="card__input">
@@ -31,16 +42,10 @@
             <button class="card__button">25%</button>
             <button class="card__button">15%</button>
             <button class="card__button">50%</button>
-            <input type="number" placeholder="Custom" class="card__button tip"></input>
+            <input type="number" placeholder="Custom" class="card__button card__button_tip"></input>
           </div>
         </div>
-        <div class="card__item">
-          <h2>Number of People</h2>
-          <div class="card__input">
-            <input type="number" id="numberOfPeople" name="numberOfPeople" class="input__ text card__numberOfPeople" placeholder="0">
-            <img src="./images/icon-person.svg" alt="" class="person">
-          </div>
-        </div>
+
       </div>
       <div class="card__subContainer green">
         <div>
@@ -59,7 +64,7 @@
             <p class="amount"><span class="total">$0.00</span></p>
           </div>
         </div>
-        <button class="card__reset">RESET</button>
+        <button class="card__reset card__reset--inactive">RESET</button>
       </div>
     </div>
   </main>

@@ -1,3 +1,14 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
 body {
     width: 100%;
     font-family: $font;
@@ -59,7 +70,7 @@ h1 , h2, p {
             width: 10px;
         }
         .person {
-            width: 15px;
+            width: 13px;
         }
     }
     &__tip {
@@ -82,8 +93,19 @@ h1 , h2, p {
             background-color: $color-Strong-cyan;
             color: $color-Very-dark-cyan;
         }
+        &--active {
+            background-color: $color-Strong-cyan;
+            color: $color-Very-dark-cyan;
+        }
         &.tip {
             text-align: center;
+        }
+    }
+    &__number-people {
+        display: flex;
+        justify-content: space-between;
+        p {
+            color: red;
         }
     }
     &__subContainer {
@@ -94,6 +116,7 @@ h1 , h2, p {
         }
 
         &.green {
+            margin-top: 3rem;
             padding: 1rem;
             background-color: $color-Very-dark-cyan;
             border-radius: 1rem;
@@ -110,15 +133,24 @@ h1 , h2, p {
         }
 
     }
+
     &__reset {
-        border-radius: .4rem;
         font-size: 20px;
         width: 100%;
         border: none;
-        background-color: hsl(183, 100%, 20%);
-        color: $color-Very-dark-cyan;
+        border-radius: .4rem;
         padding: .4rem 1rem;
-        cursor: pointer;
+        &--inactive {
+            background-color: hsl(183, 100%, 20%);
+            color: $color-Very-dark-cyan;
+        }
+        &--active {
+            background-color: $color-Strong-cyan;
+            cursor: pointer;
+            &:hover {
+                background-color: hsl(172, 67%, 65%);
+            }
+        }
     }
 
 }
@@ -148,6 +180,7 @@ footer {
             flex-basis: 300px;
             flex-grow: 1;
             &.green {
+                margin-top: 0;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
